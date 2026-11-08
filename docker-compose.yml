@@ -25,8 +25,8 @@ services:
     image: shipping:1.0.0
     container_name: shipping
     depends_on:
-    - mysql
-    - cart
+     - mysql
+     - cart
   payment:
     build: ./payment
     image: payment:1.0.0
@@ -40,15 +40,15 @@ services:
       AMQP_USER: "roboshop"
       AMQP_PASS: "roboshop123"
     depends_on:
-    - rabbitmq
-    - cart
-    - user
+     - rabbitmq
+     - cart
+     - user
   frontend:
      build: ./frontend
      image: frontend:1.0.0
      container_name: frontend
      ports:
-     - "80:80"
+      - "80:80"
      depends_on: 
       - catalogue
       - user
