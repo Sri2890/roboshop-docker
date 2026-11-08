@@ -15,7 +15,7 @@ services:
       - mongodb
   cart:
      build: ./cart
-     image: user:1.0.0
+     image: cart:1.0.0
      container_name: cart
      depends_on: 
       - redis
